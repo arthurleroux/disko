@@ -4,4 +4,12 @@
 
 {% block body %}
 
+    <h1>Listes des produits</h1>
+
+    <ul>
+        {% for product in products %}
+            <li>{{ product.name }}, {{ product.price }}€</li>
+        {% endfor %}
+    </ul>
+
 {% endblock %}
