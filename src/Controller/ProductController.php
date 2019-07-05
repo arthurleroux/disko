@@ -14,7 +14,7 @@ class ProductController extends AbstractController
      */
     public function index(EntityManagerInterface $em)
     {
-        $products = $em->getRepository(Product::class)->findAll();
+        $products = $em->getRepository(Product::class)->findAllByPrice();
 
         return $this->render('product/index.html.twig', [
             'products' => $products

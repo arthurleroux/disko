@@ -4,7 +4,9 @@
 
 {% block body %}
 
-    <h1>Listes des produits</h1>
+    <h1>Liste des produits</h1>
+
+    {{ dump(products) }}
 
     <ul>
         {% for product in products %}
